@@ -17,8 +17,7 @@ def create_app():
     INSTANCE_NAME ="healthdiary"
 
     app.config["SECRET_KEY"] = "healthdiary secretkey"
-    app.config["SQLALCHEMY_DATABASE_URI"]= f"mysql + mysqldb://root:{1234567}@{34.101.191.19}/{database}?unix_socket =/cloudsql/{login-389703}:{health
-}"
+    app.config["SQLALCHEMY_DATABASE_URI"]= f"mysql + mysqldb://root:{1234567}@{34.101.191.19}/{database}?unix_socket =/cloudsql/{login-389703}:{healthdiary}"
     app.config["SQLALCHEMY_TRACK_MODIFICATIONS"]= True
     db.init_app(app)
 
