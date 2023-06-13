@@ -5,10 +5,6 @@ from flask_login import LoginManager
 
 db = SQLAlchemy()
 
-
-def create_app():
-    app = Flask(__name__)
-    
     # Google Cloud SQL (change this accordingly)
     PASSWORD ="1234567"
     PUBLIC_IP_ADDRESS ="34.101.191.19"
@@ -16,6 +12,8 @@ def create_app():
     PROJECT_ID ="login-389703"
     INSTANCE_NAME ="healthdiary"
 
+def create_app():
+    app = Flask(__name__)
     app.config["SECRET_KEY"] = "healthdiary secretkey"
     app.config["SQLALCHEMY_DATABASE_URI"]= f"mysql + mysqldb://root:{1234567}@{34.101.191.19}/{database}?unix_socket =/cloudsql/{login-389703}:{healthdiary}"
     app.config["SQLALCHEMY_TRACK_MODIFICATIONS"]= True
