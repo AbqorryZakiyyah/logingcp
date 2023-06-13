@@ -13,13 +13,13 @@ def create_app():
     
     # Google Cloud SQL (change this accordingly)
     PASSWORD ="1234567"
-    PUBLIC_IP_ADDRESS ="34.101.187.228"
+    PUBLIC_IP_ADDRESS ="34.101.191.19"
     DBNAME ="diary"
     PROJECT_ID ="login-389703"
     INSTANCE_NAME ="healthdiary"
 
     app.config["SECRET_KEY"] = "healthdiary secretkey"
-    app.config["SQLALCHEMY_DATABASE_URI"]= f"mysql + mysqldb://root:{1234567}@{34.101.187.228}/{diary}?unix_socket =/cloudsql/{login-389703}:{healthdiary}"
+    app.config["SQLALCHEMY_DATABASE_URI"]= f"mysql + mysqldb://root:{1234567}@{34.101.191.19}/{diary}?unix_socket =/cloudsql/{login-389703}:{healthdiary}"
     app.config["SQLALCHEMY_TRACK_MODIFICATIONS"]= True
     db.init_app(app)
 
